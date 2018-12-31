@@ -15,7 +15,7 @@ fetch("/.netlify/functions/getusers")
   .then(function(myJson) {
     // console.log(myJson.hits);
 
-    const data = JSON.parse(myJson.hits);
+    const data = myJson.hits;
 
     data.forEach(res => {
       const box = document.getElementById("box");
