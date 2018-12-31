@@ -10,12 +10,12 @@
 
 fetch("/.netlify/functions/getusers")
   .then(function(response) {
-    return response;
+    return response.json();
   })
   .then(function(myJson) {
     // console.log(myJson.hits);
 
-    const data = myJson.hits;
+    const data = JSON.parse(myJson.hits);
 
     data.forEach(res => {
       const box = document.getElementById("box");
