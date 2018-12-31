@@ -10,7 +10,7 @@
 
 fetch("/.netlify/functions/getusers")
   .then(function(response) {
-    return response.json();
+    return response;
   })
   .then(function(myJson) {
     // console.log(myJson.hits);
